@@ -1,6 +1,10 @@
+{% extends 'layout.html' %}
+{% block body %}
 <h1>
 	{{ todo.title }}
 </h1>
-<p>{{ todo.text }}</p>
+<hr>
+<p>{{ todo.text|safe }}</p>
 <br>
-Created on {{ todo.create_at }}
+<small class="pull-right">Created on {{ todo.create_at }}</small>
+{% endblock %}
